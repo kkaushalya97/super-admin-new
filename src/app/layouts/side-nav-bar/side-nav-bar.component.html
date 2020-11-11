@@ -1,0 +1,17 @@
+<div class="row" id="sideNav-Main">
+    <div class="col-md-12" id="sideNav-Left">
+        <div id="sideNav-Heading" >
+            Delivergate Super Admin
+        </div>
+
+        <nav class="nav flex-column" id="nav" >
+            
+            <li class="nav-link" id="navLink"  data-toggle="pill" routerLink="/add-tenant" role="button"  aria-controls="v-pills-home" aria-selected="true" [routerLinkActive]="['active']">Dashboard</li>
+            <li class="nav-link" id="navLink"  data-toggle="pill" routerLink="/admin-dashboard" href="#v-pills-profile" role="button"  aria-controls="v-pills-home" aria-selected="true"  routerLinkActive="active " >Tenants</li>
+           
+                <a [routerLink]="['/']" ><button id="btn-logout" (click)="btnClick();">Log Out</button></a>
+            
+
+          </nav>
+    </div>
+  </div>

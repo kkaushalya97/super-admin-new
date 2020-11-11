@@ -1,0 +1,143 @@
+.title-row{
+    display: flex; 
+    justify-content: space-between; 
+    padding-top: 82px; 
+}
+
+.table-row{
+    display: flex; 
+    justify-content: space-between; 
+    margin-left: 48px; 
+    margin-top: 51px; 
+    margin-right: -100px;
+}
+
+.btn-back{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: 35px;
+    top: 51px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: overpass;
+    font-size: 18px;
+    line-height: 28px;
+    color:   #2D5697;
+}
+
+#title{
+    //position: absolute;
+    //width: 88px;
+    height: 37px;
+    margin-left: 48px;
+   // top: 84px;
+   font-family: overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 37px;
+    color: #000000;
+   
+}
+
+#btn-save{
+    //position: absolute;
+    width: 190px;
+    height: 42px;
+    margin-right: -150px;
+    //left: 914.5px;
+    top: 79px;
+    font-family: overpass;
+    background:   #2D5697;
+    border-radius: 5px;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+// #form{
+//     position: absolute;
+//     width: 1072px;
+//     height: 719px;
+//     left: 35px;
+//     top: 181px;
+    
+   
+//     font-style: normal;
+//     font-weight: 300;
+//     font-size: 14px;
+//     line-height: 21px;
+//     justify-content: space-between;
+    
+//     color: #000000;
+// }
+
+input[type=text]{
+    //position: absolute;
+    height: 42px;
+    border: 1px solid #A6A4A4;
+    border-radius: 5px;
+    margin: 10px 0px 20px;
+  
+}
+
+.lbltext{
+    font-style: normal;
+    font-weight:normal;
+    font-size: 14px;
+    line-height: 21px;
+    height: 21px;
+    //color:  #3F3F3F;  
+   font-family: overpass;
+}
+
+.subtitle{
+    height: 28px;
+    left: 48px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+   font-family: overpass;
+}
+
+.week{
+    //position: absolute;
+    width: 52px;
+    top: 20px;
+    margin-left: 25px;
+    //left: 300px;
+}
+
+.app-margin{
+    //margin-left: 30px;
+    margin-top: -21px;
+}
+
+.db-margin{
+    margin-left: 20px;
+    margin-top: 24px;
+}
+
+.weekday{
+    width: 718px;
+    //left: 365px;
+    margin-left: -10px;
+    position: absolute;
+    align-content: space-between;
+}
+
+.weekday2{
+    //width: 690px;
+   
+    margin-left: -20px;
+    position: absolute;
+}
+
+
+

@@ -1,0 +1,42 @@
+<div class="container" id="admin" >
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+        <div>
+            <div id="title">Delivergate Super Admin</div>
+            <div>
+                <label id="lblemail" for="email">Email</label>
+                <div>
+                    <input type="text" id="inputemail" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  >
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div id="errormsg1" *ngIf="f.email.errors.required">Email is required</div>
+                        <div id="errormsg1" *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <div>
+                <label for="password" id="lblpw" >Password</label>
+                <div>
+                    <input type="text" id="inputpw" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div id="errormsg2" *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="password" id="lblforgotpw">Forgot Password?</label>
+            </div>
+
+           
+            <div >
+                 <button id="btnlogin"   *ngIf="!loading" >Login</button>
+                <!-- <a [routerLink]="['/admin-dashboard']"> <button id="btnlogin" (click)="btnClick();" >Login</button></a> -->
+            </div>
+           
+        
+        </div>
+    </form>
+    </div>
+    

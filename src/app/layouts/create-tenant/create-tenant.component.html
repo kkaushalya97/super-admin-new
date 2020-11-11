@@ -1,0 +1,248 @@
+<div class="col-md-4">
+    <app-side-nav-bar></app-side-nav-bar> 
+</div>
+
+<div class="col-md-8">
+    <div>
+        <a routerLink="/../admin-dashboard">
+            <div class="btn-back">
+                Back
+            </div>
+        </a>
+
+    </div>
+    <div class="title-row">
+        <div id="title">
+            <span *ngIf="!isAddingUser" >Tenant Name</span>
+            <span *ngIf="isAddingUser" >Create Tenant</span>
+        </div>
+        <div>
+        <a>
+            <button *ngIf="!isAddingUser"  id="btn-save" >Save Changes</button>
+            <button *ngIf="isAddingUser"  id="btn-save" >Create Tenant</button>
+        </a>    
+        </div>
+        
+    </div>
+
+    <div >
+        <form  [formGroup]="registerForm"  class="table-row">
+            <table class="table">
+                <tbody>
+                    <tr><td class="subtitle"  style="padding-right: 163px; border: none;">Application Config</td>
+                        <td style="border: none;">
+                            <div >
+                                <div class="form-group" >
+                                    <label for="client-id" class="lbltext">Client Id</label>
+                                    <input type="text" class="form-control" name="client-id">
+                                  </div>
+                            </div>
+                        </td>
+                        <td colspan="2" style="border: none;">
+                            <div>
+                                <div class="form-group" >
+                                    <label for="client-secret" class="lbltext">Client Secret</label>
+                                    <input type="text" class="form-control"  name="lient-secret">
+                                  </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="subtitle" style="padding-top: 56.5px;"> Database Config</td>
+                        <td>
+                            <div >
+                                <div class="form-group">
+                                    <label for="dbhost" class="lbltext" style="padding-top: 41.5px;">Database Host</label>
+                                    <input type="text" class="form-control"  name="dbhost">
+                                  </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <div class="form-group">
+                                    <label for="dbName" class="lbltext" style="padding-top: 41.5px;">Database Name</label>
+                                    <input type="text" class="form-control"  name="dbName">
+                                  </div>
+                            </div>
+                        </td>
+                        <td >
+                            <div>
+                                <div class="form-group">
+                                    <label for="dbPort" class="lbltext" style="padding-top: 41.5px;">Database Port</label>
+                                    <input type="text" class="form-control"  name="dbPort">
+                                  </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="border: none;"></td>
+                        <td style="border: none;">
+                            <div>
+                                <div class="form-group">
+                                    <label for="dbuname" class="lbltext">Database UserName</label>
+                                    <input type="text" class="form-control"  name="dbuname">
+                                  </div>
+                            </div>
+                        </td>
+                        <td style="border: none;">
+                            <div>
+                                <div class="form-group">
+                                    <label for="dbpw" class="lbltext">Database password</label>
+                                    <input type="text" class="form-control"  name="dbpw">
+                                  </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="subtitle" style="padding-top: 56.5px;">User Config</td>
+                        <td>
+                            <div>
+                                <div class="form-group" >
+                                    <label for="cname" class="lbltext" style="padding-top: 41.5px;">Customer ID</label>
+                                    <input type="text" class="form-control"  name="cname">
+                                  </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <div class="form-group">
+                                    <label for="cnumber" class="lbltext" style="padding-top: 41.5px;">Customer Name</label>
+                                    <input type="text" class="form-control"  name="cnumber">
+                                  </div>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- <div>
+                                <div class="form-group">
+                                    <label for="cvatno" class="lbltext" style="padding-top: 41.5px;">Company VATNumber</label>
+                                    <input type="text" class="form-control"  name="cvatno">
+                                  </div>
+                            </div> -->
+                        </td>
+                    </tr>
+
+                    <!-- <tr>
+                        <td style="border: none;"></td>
+                        <td style="border: none;">
+                            <div>
+                                <div class="form-group" >
+                                    <label for="" class="lbltext"></label>
+                                    <input type="text" class="form-control"   style=" margin-top: 3px;">
+                                  </div>
+                            </div> 
+                        </td>
+                        <td style="border: none;">
+                            <div>
+                                <div class="form-group">
+                                    <label for="calender" class="lbltext">national Calender</label>
+                                    <input type="text" class="form-control"  name="calender">
+                                  </div>
+                            </div>
+                        </td>
+                        <td style="border: none;">
+                            <div>
+                                <div class="form-group">
+                                    <label for="dweek" class="lbltext">Default Working Week</label>
+                                    <input type="text" class="form-control"  name="dweek">
+                                  </div>
+                            </div>
+                        </td> 
+                    </tr> -->
+
+                    <!-- <tr>
+                        <td style="border: none;"></td>
+                        
+                        <div class="weekday"> -->
+                            <!-- <td style="border: none;">
+                                    <div class="form-group" class="week" style="margin-left: 15px;">
+                                       <label for="monday" class="lbltext">Monday</label>
+                                        <input type="text" class="form-control"  name="monday" >
+                                    </div>
+                            </td>
+                            
+                            <td style="border: none;">
+                                    <div class="form-group" style="margin-left: 30px;" class="week"> 
+                                        <label for="tuesday" class="lbltext">Tuesday</label>
+                                        <input type="text" class="form-control"  name="tuesday" >
+                                      </div>
+                            </td>
+                            <td style="border: none;">
+                                    <div class="form-group" style="margin-left: 30px;" class="week">
+                                       <label for="wednesday" class="lbltext">Wednesday</label>
+                                        <input type="text" class="form-control"  name="wednesday" >
+                                      </div>
+                            </td>
+                            <td style="border: none;">
+                                    <div class="form-group" style="margin-left: 30px;" class="week">
+                                        <label for="Thursday" class="lbltext"> Thursday</label>
+                                        <input type="text" class="form-control"  name="Thursday"  style="align-items: center;">
+                                      </div>
+                            </td>
+                            <td style="border: none;">
+                                    <div class="form-group" style="margin-left: 30px;" class="week">
+                                        <label for="Friday" class="lbltext"> Friday</label>
+                                        <input type="text" class="form-control"  name="Friday" >
+                                      </div>
+                            </td>
+                            <td style="border: none;">
+                                    <div class="form-group" style="margin-left: 30px;" class="week">
+                                       <label for="Saturday" class="lbltext">Saturday</label>
+                                        <input type="text" class="form-control"  name="Saturday" >
+                                      </div>
+                            </td>
+                            <td style="border: none;">
+                                    <div class="form-group" style="margin-left: 30px;" class="week">
+                                        <label for="Sunday" class="lbltext"> Sunday</label>
+                                        <input type="text" class="form-control"  name="Sunday" >
+                                      </div>
+                            </td> -->
+                            
+                            <!-- <tr>
+                                <div class="weekday2">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td style="border: none;">
+                                                    <div>
+                                                        <div class="form-group" class="app-margin" style="margin-left:30px ;" >
+                                                            <label for="fname" class="lbltext">First Name</label>
+                                                            <input type="text" class="form-control"  name="fname" >
+                                                          </div>
+                                                    </div>
+                                                </td>
+                                                <td style="border: none;">
+                                                    <div>
+                                                        <div class="form-group" class="app-margin">
+                                                            <label for="Lname" class="lbltext">Last Name</label>
+                                                            <input type="text" class="form-control"  name="Lname">
+                                                          </div>
+                                                    </div>
+                                                </td>
+                                                <td style="border: none;">
+                                                    <div>
+                                                        <div class="form-group" class="app-margin">
+                                                            <label for="email" class="lbltext">Email</label>
+                                                            <input type="text" class="form-control"  name="email">
+                                                          </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                            </tr> -->
+                        <!-- </div>
+                       
+                    </tr> -->
+                    
+    
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+

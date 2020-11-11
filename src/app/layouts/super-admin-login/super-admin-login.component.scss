@@ -1,0 +1,140 @@
+#admin{
+    position: relative;
+    width: 509px;
+    height: 519px;
+    // text-align: center; 
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-top: 12%;
+}
+
+#title{
+    position: absolute;
+    //width: 293px;
+    height: 43px;
+    left: 52px;
+    top: 50px;
+    text-align: center;
+    align-items: center;
+    
+    font-family:overpass;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+
+    color: #000000;
+}
+
+#lblemail{
+    position: absolute;
+    width: 43px;
+    height: 21px;
+    left: 52px;
+    top: 150px;
+
+    font-family:overpass;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+#inputemail{
+    position: absolute;
+    width: 410px;
+    height: 48px;
+    left: 52px;
+    top: 190px;
+
+    border: 1px  solid #B3B3B3;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#errormsg1{
+    position: absolute;
+    width: 410px;
+    height: 48px;
+    left: 52px;
+    top: 243px;
+    font-size: 12px;
+}
+
+
+#lblpw{
+    position: absolute;
+    width: 76px;
+    height: 21px;
+    left: 52px;
+    top: 270px;
+
+    font-family:overpass;    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+#inputpw{
+    position: absolute;
+    width: 410px;
+    height: 48px;
+    left: 52px;
+    top: 310px;
+
+    border: 1px solid  #B3B3B3;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#errormsg2{
+    position: absolute;
+    width: 410px;
+    height: 48px;
+    left: 52px;
+    top: 363px;
+    font-size: 12px;
+
+}
+
+#lblforgotpw{
+    position: absolute;
+    //width: 16px;
+    height: 21px;
+    left: 52px;
+    top: 380px;
+
+    font-family:overpass;    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+#btnlogin{
+    position: absolute;
+    width: 410px;
+    height: 48px;
+    left: 52px;
+    top: 435px;
+
+    background:   #2D5697;
+    border-radius: 5px;
+
+    color: white;
+    border: none; 
+    font-family: overpass;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+ 
+}
+

@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css);
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css);
+@import url(//db.onlinewebfonts.com/c/23c8ec0d7b298e340b59bd32a7e661f3?family=SF+Compact+Display);
+@import url(https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;600;700&display=swap);
+
+.col-md-4{
+    height: 1001px; 
+     width: 300px;
+    // background-color: #E5E5E5;;
+}
+
+.col-md-8{
+    //height:900px ;
+    //width: 1140px;
+    //justify-content: space-between;
+}
+
+
+
+.navtitle{
+    position: absolute;
+    width: 196px;
+    height: 37px;
+    left: 52px;
+    top: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 37px;
+    color: #000000;
+}
+
+#border{
+    position: absolute;
+    width: 300px;
+    height: 0px;
+    left: 0.5px;
+    top: 97px;
+    border: 1px solid #B4B1B1;
+}
+
+// #nav-items{
+//     position: absolute;
+//     width: 88px;
+//     height: 28px;
+//     left: 55px;
+//     top: 134px;
+//     list-style-type: none;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 18px;
+//     line-height: 28px;
+//     color: #000000;
+// }
+
+#btn-tenant{
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    left: 0px;
+    top: 178px;
+    
+    background: #53BD9C;
+    border: none;
+    
+}
+
+.btn-text{ 
+    position: absolute;
+    width: 64px;
+    height: 28px;
+    left: 55px;
+    top: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    
+}
+
+
+
+
