@@ -13,20 +13,21 @@
     </div>
     <div class="title-row">
         <div id="title">
-            <span *ngIf="!isAddingUser" >Tenant Name</span>
+            <span *ngIf="!isAddingUser">C-{{client_id}}</span>
             <span *ngIf="isAddingUser" >Create Tenant</span>
         </div>
         <div>
         <a>
-            <button *ngIf="!isAddingUser"  id="btn-save" >Save Changes</button>
-            <button *ngIf="isAddingUser"  id="btn-save" >Create Tenant</button>
+            <button *ngIf="!isAddingUser"  id="btn-save"  [routerLink]="['/admin-dashboard']" (click)='editTenant()'>Save Changes</button>
+            <button *ngIf="isAddingUser"  id="btn-save" [routerLink]="['/admin-dashboard']" (click)='addTenant()'>Create Tenant</button>
         </a>    
         </div>
         
     </div>
 
     <div >
-        <form  [formGroup]="registerForm"  class="table-row">
+
+        <form  [formGroup]="addTenantForm" class="table-row">
             <table class="table">
                 <tbody>
                     <tr><td class="subtitle"  style="padding-right: 163px; border: none;">Application Config</td>
@@ -34,7 +35,7 @@
                             <div >
                                 <div class="form-group" >
                                     <label for="client-id" class="lbltext">Client Id</label>
-                                    <input type="text" class="form-control" name="client-id">
+                                    <input type="text" class="form-control"  formControlName="client_id">
                                   </div>
                             </div>
                         </td>
@@ -42,7 +43,7 @@
                             <div>
                                 <div class="form-group" >
                                     <label for="client-secret" class="lbltext">Client Secret</label>
-                                    <input type="text" class="form-control"  name="lient-secret">
+                                    <input type="text" class="form-control"  formControlName="client_secret">
                                   </div>
                             </div>
                         </td>
@@ -54,7 +55,7 @@
                             <div >
                                 <div class="form-group">
                                     <label for="dbhost" class="lbltext" style="padding-top: 41.5px;">Database Host</label>
-                                    <input type="text" class="form-control"  name="dbhost">
+                                    <input type="text" class="form-control" formControlName="db_host">
                                   </div>
                             </div>
                         </td>
@@ -62,7 +63,7 @@
                             <div>
                                 <div class="form-group">
                                     <label for="dbName" class="lbltext" style="padding-top: 41.5px;">Database Name</label>
-                                    <input type="text" class="form-control"  name="dbName">
+                                    <input type="text" class="form-control"  formControlName="db_name">
                                   </div>
                             </div>
                         </td>
@@ -70,7 +71,7 @@
                             <div>
                                 <div class="form-group">
                                     <label for="dbPort" class="lbltext" style="padding-top: 41.5px;">Database Port</label>
-                                    <input type="text" class="form-control"  name="dbPort">
+                                    <input type="text" class="form-control"  formControlName="db_port">
                                   </div>
                             </div>
                         </td>
@@ -82,7 +83,7 @@
                             <div>
                                 <div class="form-group">
                                     <label for="dbuname" class="lbltext">Database UserName</label>
-                                    <input type="text" class="form-control"  name="dbuname">
+                                    <input type="text" class="form-control"  formControlName="db_username">
                                   </div>
                             </div>
                         </td>
@@ -90,7 +91,15 @@
                             <div>
                                 <div class="form-group">
                                     <label for="dbpw" class="lbltext">Database password</label>
-                                    <input type="text" class="form-control"  name="dbpw">
+                                    <input type="text" class="form-control"  formControlName="db_password">
+                                  </div>
+                            </div>
+                        </td>
+                        <td style="border: none;">
+                            <div>
+                                <div class="form-group">
+                                    <label for="dbpw" class="lbltext">Database Status</label>
+                                    <input type="text" class="form-control"  formControlName="status">
                                   </div>
                             </div>
                         </td>
@@ -101,16 +110,16 @@
                         <td>
                             <div>
                                 <div class="form-group" >
-                                    <label for="cname" class="lbltext" style="padding-top: 41.5px;">Customer ID</label>
-                                    <input type="text" class="form-control"  name="cname">
+                                    <label for="cname" class="lbltext" style="padding-top: 41.5px;">Code</label>
+                                    <input type="text" class="form-control" formControlName="code">
                                   </div>
                             </div>
                         </td>
                         <td>
                             <div>
                                 <div class="form-group">
-                                    <label for="cnumber" class="lbltext" style="padding-top: 41.5px;">Customer Name</label>
-                                    <input type="text" class="form-control"  name="cnumber">
+                                    <label for="cnumber" class="lbltext" style="padding-top: 41.5px;">Report Endpoint</label>
+                                    <input type="text" class="form-control"  formControlName="report_endpoint">
                                   </div>
                             </div>
                         </td>

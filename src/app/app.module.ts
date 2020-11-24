@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,12 @@ import { CreateTenantComponent } from './layouts/create-tenant/create-tenant.com
 import { SideNavBarComponent } from './layouts/side-nav-bar/side-nav-bar.component';
 import { SuperAdminDashboardComponent } from './layouts/super-admin-dashboard/super-admin-dashboard.component';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ErrorMessageHandler } from './helpers/error-handler';
+import { ApiService } from './services/shared/api.service';
+import { TenantService } from './services/tenant.service';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +27,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {
@@ -41,7 +50,7 @@ import { RouterModule } from '@angular/router';
       }
     ])
   ],
-  providers: [],
+  providers: [ErrorMessageHandler, ApiService, TenantService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

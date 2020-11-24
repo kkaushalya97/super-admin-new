@@ -12,7 +12,7 @@ import { AuthenticationService } from './auth.service';
 })
 export class ApiService {
 
-  private x_tenant_code = `${environment.x_tenant_code}`;
+  //private x_tenant_code = `${environment.x_tenant_code}`;
   constructor(
     private http: HttpClient,
     private errorHandler: ErrorMessageHandler,
@@ -35,14 +35,14 @@ export class ApiService {
         'Accept': 'aplication/json',
         'Access-Control-Allow-Origin': '*',
         'Authorization': 'Bearer ' + token.token,
-        'x-tenant-code': this.x_tenant_code,
+        //'x-tenant-code': this.x_tenant_code,
       })
     } else {
       return new HttpHeaders({
         'Content-Type': 'application/json',
         'Accept': 'aplication/json',
         'Access-Control-Allow-Origin': '*',
-        'x-tenant-code': this.x_tenant_code
+        //'x-tenant-code': this.x_tenant_code
       })
     }
   }
@@ -52,11 +52,12 @@ export class ApiService {
       'Content-Type': 'application/json',
       'Accept': 'aplication/json',
       'Access-Control-Allow-Origin': '*',
-      'x-tenant-code': this.x_tenant_code
+      //'x-tenant-code': this.x_tenant_code
     })
   }
 
-  getBaseUrl(service: string) {
+  getBaseUrl() {
+    return `${environment.user.api_base_url}`;
     // if (service == 'user') {
     //   return `${environment.user.api_base_url}`;
     // } else if (service == 'system') {
@@ -88,45 +89,45 @@ export class ApiService {
     );
   }
 
-  get(path: string, service: string): Observable<any> {
+  get(path: string): Observable<any> {
     return this.http
-      .get<any>(this.getBaseUrl(service) + `${path}`, { headers: this.headers })
+      .get<any>(this.getBaseUrl() + `${path}`, { headers: this.headers })
       .pipe(
         catchError(err => this.handleError(err, this.errorHandler))
       );
   }
 
-  put(path: string, body: Object = {}, service: string): Observable<any> {
+  put(path: string, body: Object = {}): Observable<any> {
     return this.http
-      .put<any>(this.getBaseUrl(service) + `${path}`, JSON.stringify(body), { headers: this.headers })
+      .put<any>(this.getBaseUrl() + `${path}`, JSON.stringify(body), { headers: this.headers })
       .pipe(
         catchError(err => this.handleError(err, this.errorHandler))
       )
   }
 
-  post(path: string, body: Object = {}, service: string): Observable<any> {
-    if (service !== 'auth') {
+  post(path: string, body: Object = {}): Observable<any> {
+    //if (service !== 'auth') {
       return this.http
-        .post<any>(this.getBaseUrl(service) + `${path}`, JSON.stringify(body), { headers: this.headers }
+        .post<any>(this.getBaseUrl() + `${path}`, JSON.stringify(body), { headers: this.headers }
         )
         .pipe(
           catchError(err => this.handleError(err, this.errorHandler))
         );
-    } else {
-      return this.http
-        .post<any>(this.getBaseUrl(service) + `${path}`, JSON.stringify(body), { headers: this.getAutoLoginHeader() }
-        )
-        .pipe(
-          catchError(err => this.handleError(err, this.errorHandler))
-        );
-    }
+    // } else {
+    //   return this.http
+    //     .post<any>(this.getBaseUrl() + `${path}`, JSON.stringify(body), { headers: this.getAutoLoginHeader() }
+    //     )
+    //     .pipe(
+    //       catchError(err => this.handleError(err, this.errorHandler))
+    //     );
+    // }
 
   }
 
 
-  delete(path: string, service: string): Observable<any> {
+  delete(path: string): Observable<any> {
     return this.http
-      .delete<any>(this.getBaseUrl(service) + `${path}`, { headers: this.headers })
+      .delete<any>(this.getBaseUrl() + `${path}`, { headers: this.headers })
       .pipe(
         catchError(err => this.handleError(err, this.errorHandler))
       );
